@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_servicio: MyString
+  descripcion_servicio: MyText
+
+two:
+  nombre_servicio: MyString
+  descripcion_servicio: MyText
