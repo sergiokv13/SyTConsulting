@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Periodo acontecimiento:</strong>
+  <%= @acontecimiento.periodo_acontecimiento %>
+</p>
+
+<p>
+  <strong>Titulo acontecimiento:</strong>
+  <%= @acontecimiento.titulo_acontecimiento %>
+</p>
+
+<p>
+  <strong>Descripcion acontecimiento:</strong>
+  <%= @acontecimiento.descripcion_acontecimiento %>
+</p>
+
+<%= link_to 'Edit', edit_acontecimiento_path(@acontecimiento) %> |
+<%= link_to 'Back', acontecimientos_path %>

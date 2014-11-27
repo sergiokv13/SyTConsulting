@@ -114,23 +114,23 @@ background-color: #fff;
 }
 .btn-xl {
 padding: 20px 40px;
-border-color: #fed136;
+border-color: #444444;
 border-radius: 3px;
 text-transform: uppercase;
 font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size: 18px;
 font-weight: 700;
 color: #fff;
-background-color: #fed136;
+background-color: #6CB1FA;
 }
 .btn-xl:hover,
 .btn-xl:focus,
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-border-color: #f6bf01;
+border-color: #6CB1FA;
 color: #fff;
-background-color: #fec503;
+background-color: #444444;
 }
 .btn-xl:active,
 .btn-xl.active,
@@ -161,9 +161,17 @@ background-color: #fff;
 }
 
 .navbar-default {
-	background-color: #6CB1FA;
-	border-bottom:solid #444444;
+	background-color: transparent;
+	border-color: transparent;
 }
+.navbar-default li a{
+	border-bottom: solid #6CB1FA;
+	background-color: #6CB1FA;
+	border-left: solid #6CB1FA;
+	border-right: solid #6CB1FA;
+}
+
+
 
 .navbar-default .navbar-brand {
 font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
@@ -178,6 +186,14 @@ letter-spacing: 1px;
 color: white;
 }
 
+.navbar-default .nav li a:hover {
+color: red;
+
+}
+
+.fa-circle{
+	color:red;
+}
 header {
 text-align: center;
 color: #fff;
@@ -682,3 +698,4 @@ background: 0 0;
 body {
 webkit-tap-highlight-color: #fed136;
 }
+

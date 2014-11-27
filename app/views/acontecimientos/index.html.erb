@@ -1,0 +1,29 @@
+<h1>Listing acontecimientos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Periodo acontecimiento</th>
+      <th>Titulo acontecimiento</th>
+      <th>Descripcion acontecimiento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acontecimientos.each do |acontecimiento| %>
+      <tr>
+        <td><%= acontecimiento.periodo_acontecimiento %></td>
+        <td><%= acontecimiento.titulo_acontecimiento %></td>
+        <td><%= acontecimiento.descripcion_acontecimiento %></td>
+        <td><%= link_to 'Show', acontecimiento %></td>
+        <td><%= link_to 'Edit', edit_acontecimiento_path(acontecimiento) %></td>
+        <td><%= link_to 'Destroy', acontecimiento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acontecimiento', new_acontecimiento_path %>

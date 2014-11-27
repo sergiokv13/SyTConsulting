@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  periodo_acontecimiento: MyString
+  titulo_acontecimiento: MyString
+  descripcion_acontecimiento: MyText
+
+two:
+  periodo_acontecimiento: MyString
+  titulo_acontecimiento: MyString
+  descripcion_acontecimiento: MyText

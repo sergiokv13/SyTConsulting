@@ -1,0 +1,29 @@
+<%= form_for(@acontecimiento) do |f| %>
+  <% if @acontecimiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@acontecimiento.errors.count, "error") %> prohibited this acontecimiento from being saved:</h2>
+
+      <ul>
+      <% @acontecimiento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :periodo_acontecimiento %><br>
+    <%= f.text_field :periodo_acontecimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo_acontecimiento %><br>
+    <%= f.text_field :titulo_acontecimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_acontecimiento %><br>
+    <%= f.text_area :descripcion_acontecimiento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
