@@ -1,4 +1,6 @@
 class AcontecimientosController < ApplicationController
+  before_action :authenticate_usuario!
+
   before_action :set_acontecimiento, only: [:show, :edit, :update, :destroy]
 
   # GET /acontecimientos

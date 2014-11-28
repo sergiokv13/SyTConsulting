@@ -1,4 +1,5 @@
 class ContactosController < ApplicationController
+  before_action :authenticate_usuario!, :except => [:new, :create]
   before_action :set_contacto, only: [:show, :edit, :update, :destroy]
 
   # GET /contactos
