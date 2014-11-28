@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo_certificacion: MyString
+  descripcion_certificacion: MyText
+
+two:
+  titulo_certificacion: MyString
+  descripcion_certificacion: MyText

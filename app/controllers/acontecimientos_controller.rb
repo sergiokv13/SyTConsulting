@@ -69,6 +69,6 @@ class AcontecimientosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def acontecimiento_params
-      params.require(:acontecimiento).permit(:periodo_acontecimiento, :titulo_acontecimiento, :descripcion_acontecimiento)
+      params.require(:acontecimiento).permit(:periodo_acontecimiento, :titulo_acontecimiento, :descripcion_acontecimiento, :foto)
     end
 end

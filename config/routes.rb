@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :portafolios
+
+  resources :certificacions
+
+  resources :informacions
+
   resources :acontecimientos
 
   resources :servicios

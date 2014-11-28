@@ -1,0 +1,25 @@
+<%= form_for(@certificacion) do |f| %>
+  <% if @certificacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@certificacion.errors.count, "error") %> prohibited this certificacion from being saved:</h2>
+
+      <ul>
+      <% @certificacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo_certificacion %><br>
+    <%= f.text_field :titulo_certificacion %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_certificacion %><br>
+    <%= f.text_area :descripcion_certificacion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

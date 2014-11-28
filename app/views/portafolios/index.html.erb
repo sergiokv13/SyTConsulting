@@ -1,0 +1,27 @@
+<h1>Listing portafolios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo portafolio</th>
+      <th>Descripcion portafolio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portafolios.each do |portafolio| %>
+      <tr>
+        <td><%= portafolio.titulo_portafolio %></td>
+        <td><%= portafolio.descripcion_portafolio %></td>
+        <td><%= link_to 'Show', portafolio %></td>
+        <td><%= link_to 'Edit', edit_portafolio_path(portafolio) %></td>
+        <td><%= link_to 'Destroy', portafolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portafolio', new_portafolio_path %>

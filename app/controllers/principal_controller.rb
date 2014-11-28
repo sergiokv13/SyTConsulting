@@ -3,5 +3,8 @@ class PrincipalController < ApplicationController
   	@contacto = Contacto.new
   	@servicios = Servicio.all
   	@acontecimientos = Acontecimiento.all
+  	@informacion = Informacion.first
+  	@certificaciones = Certificacion.all
+  	@portafolios = Portafolio.all
   end
 end

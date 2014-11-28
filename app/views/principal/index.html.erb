@@ -22,10 +22,13 @@
 <a class="page-scroll" href="#services">Servicios</a>
 </li>
 <li>
+<a class="page-scroll" href="#certificaciones">Certificaciones</a>
+</li>
+<li>
 <a class="page-scroll" href="#portfolio">Portafolio</a>
 </li>
 <li>
-<a class="page-scroll" href="#about">Acerca de </a>
+<a class="page-scroll" href="#about">Acontecimientos </a>
 </li>
 <li>
 <a class="page-scroll" href="#team">El equipo</a>
@@ -57,7 +60,7 @@
 					Servicios
 				</h2>
 				<h3 class="section-subheading text-muted">
-					Nuestros servicios
+					<%= @informacion.contenido_informacion %>
 				</h3>
 			</div>
 		</div>
@@ -103,6 +106,39 @@
 		</div>
 	</div>
 </section>
+<section id="certificaciones">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">
+					Certificaciones
+				</h2>
+				<h3 class="section-subheading text-muted">
+					Poseemos las siguientes certificaciones
+				</h3>
+			</div>
+		</div>
+		<div class="row text-center">
+			<% @certificaciones.each do |certificacion| %>
+			<div class="col-md-4">
+				<span class="fa-stack fa-4x">
+					<i class="fa fa-circle fa-stack-2x text-primary"></i>
+					<i class="fa fa-book fa-stack-1x fa-inverse"></i>
+				</span>
+				<h4 class="service-heading">
+						<%= certificacion.titulo_certificacion %>
+				</h4>
+				<p class="text-muted">
+					<%= certificacion.descripcion_certificacion %>
+				</p>
+			</div>
+
+			
+
+			<% end %>
+		</div>
+	</div>
+</section>
 <!-- Portfolio Grid Section -->
 <section id="portfolio" class="bg-light-gray">
 <div class="container">
@@ -112,101 +148,31 @@
 <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
 </div>
 </div>
-<div class="row">
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Round Icons</h4>
-<p class="text-muted">Graphic Design</p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Startup Framework</h4>
-<p class="text-muted">Website Design</p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Treehouse</h4>
-<p class="text-muted">Website Design</p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/golden.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Golden</h4>
-<p class="text-muted">Website Design</p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/escape.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Escape</h4>
-<p class="text-muted">Website Design</p>
-</div>
-</div>
-<div class="col-md-4 col-sm-6 portfolio-item">
-<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-<div class="portfolio-hover">
-<div class="portfolio-hover-content">
-<i class="fa fa-plus fa-3x"></i>
-</div>
-</div>
-<img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-</a>
-<div class="portfolio-caption">
-<h4>Dreams</h4>
-<p class="text-muted">Website Design</p>
-</div>
-</div>
-</div>
-</div>
+<% @portafolios.each do |portafolio| %>
+	<div class="row">
+	<div class="col-md-4 col-sm-6 portfolio-item">
+	<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+	<div class="portfolio-hover">
+	<div class="portfolio-hover-content">
+	<i class="fa fa-plus fa-3x"></i>
+	</div>
+	</div>
+	<img src=<%= portafolio.foto.url %> class="img-responsive" alt="">
+	</a>
+	<div class="portfolio-caption">
+	<h4><%= portafolio.titulo_portafolio %></h4>
+	</div>
+	</div>
+	</div>
+<% end %>
 </section>
 <!-- About Section -->
 <section id="about">
 <div class="container">
 <div class="row">
 <div class="col-lg-12 text-center">
-<h2 class="section-heading">Acerca de</h2>
-<h3 class="section-subheading text-muted">Conoce mas sobre nuestra empresa</h3>
+<h2 class="section-heading">Acontecimientos</h2>
+<h3 class="section-subheading text-muted">Conoce mas sobre los acontecimientos que marcaron nuestra empresa</h3>
 </div>
 </div>
 <div class="row">
@@ -215,20 +181,20 @@
 <% @acontecimientos.each do |acontecimiento| %>
 <li>
 	<div class="timeline-image">
-		<img class="img-circle img-responsive" src="/assets/1.jpg" alt="">
+		<img class="img-circle img-responsive" src=<%= acontecimiento.foto.url %> alt="">
 	</div>
 	<div class="timeline-panel">
 		<div class="timeline-heading">
 			<h4>
-				2009-2011
+				<%= acontecimiento.periodo_acontecimiento %>
 			</h4>
 			<h4 class="subheading">
-				Our Humbleer Beginnings
+				<%= acontecimiento.titulo_acontecimiento %>
 			</h4>
 		</div>
 		<div class="timeline-body">
 			<p class="text-muted">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+				<%= acontecimiento.descripcion_acontecimiento %>
 			</p>
 		</div>
 	</div>
