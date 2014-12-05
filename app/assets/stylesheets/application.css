@@ -187,14 +187,14 @@ color: white;
 }
 
 .navbar-default .nav li a:hover {
-color: red;
+color: #A5A5A5;
 
 }
 
 .fa-circle{
 	color:red;
 }
-header {
+#header {
 text-align: center;
 color: #fff;
 background-attachment: scroll;
@@ -206,45 +206,38 @@ background-repeat: none;
 background-size: cover;
 -o-background-size: cover;
 }
-header .intro-text {
+#header .intro-text {
 padding-top: 100px;
 padding-bottom: 50px;
 }
-header .intro-text .intro-lead-in {
+#header .intro-text .intro-lead-in {
 margin-bottom: 25px;
-font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 22px;
-font-style: italic;
-line-height: 22px;
-}
-header .intro-text .intro-heading {
-margin-bottom: 25px;
-text-transform: uppercase;
 font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 50px;
-font-weight: 700;
-line-height: 50px;
+font-size: 25px;
+font-style: italic;
+line-height: 25px;
 }
+#header .intro-text .intro-lead-in a {
+	color: white;
+}
+
 @media(min-width:768px) {
-header .intro-text {
+#header .intro-text {
 padding-top: 300px;
 padding-bottom: 200px;
 }
-header .intro-text .intro-lead-in {
+#header .intro-text .intro-lead-in {
 margin-bottom: 25px;
-font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 40px;
-font-style: italic;
-line-height: 40px;
-}
-header .intro-text .intro-heading {
-margin-bottom: 50px;
-text-transform: uppercase;
 font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 75px;
-font-weight: 700;
-line-height: 75px;
+font-size: 25px;
+font-style: italic;
+line-height: 25px;
 }
+#header .intro-text .intro-lead-in a {
+	color: white;
+}
+
+
 }
 section {
 padding: 100px 0;
