@@ -1,9 +1,6 @@
+<div class="container" style="margin-top:60px;">
+<div class="jumbotron">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Periodo acontecimiento:</strong>
-  <%= @acontecimiento.periodo_acontecimiento %>
-</p>
 
 <p>
   <strong>Titulo acontecimiento:</strong>
@@ -11,9 +8,23 @@
 </p>
 
 <p>
+  <strong>Periodo acontecimiento:</strong>
+  <%= @acontecimiento.periodo_acontecimiento %>
+</p>
+
+<p>
   <strong>Descripcion acontecimiento:</strong>
   <%= @acontecimiento.descripcion_acontecimiento %>
 </p>
 
-<%= link_to 'Edit', edit_acontecimiento_path(@acontecimiento) %> |
-<%= link_to 'Back', acontecimientos_path %>
+<p>
+	<strong>Imagen:</strong><br>
+	<img src="<%= @acontecimiento.foto.url %>" width="250px;"> 
+</p>
+
+<br>
+<br>
+<%= link_to 'Editar', edit_acontecimiento_path(@acontecimiento), :class=>"btn btn-warning" %> 
+<%= link_to 'Atras', :back, :class=>"btn btn-success" %>
+</div>
+</div>

@@ -8,6 +8,7 @@
     <tr class="info">
       <th>Nombre servicio</th>
       <th>Descripcion servicio</th>
+      <th>Imagen</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +18,7 @@
       <tr>
         <td><%= servicio.nombre_servicio %></td>
         <td><%= servicio.descripcion_servicio %></td>
-        <td><%= link_to 'Ver', servicio, :class=>"btn btn-primary" %></td>
+        <td><img src="<%= servicio.foto.url %>" width="150px;"></td>
         <td><%= link_to 'Editar', edit_servicio_path(servicio), :class=>"btn btn-warning" %></td>
         <td><%= link_to 'Borrar', servicio, method: :delete, data: { confirm: 'Esta seguro que desea eliminar este servicio?' }, :class=>"btn btn-danger" %></td>
       </tr>

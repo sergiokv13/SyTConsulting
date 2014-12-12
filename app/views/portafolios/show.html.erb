@@ -1,14 +1,23 @@
+<div class="container" style="margin-top:60px;">
+<div class="jumbotron">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Titulo portafolio:</strong>
+  <strong>Titulo de la imagen:</strong>
   <%= @portafolio.titulo_portafolio %>
 </p>
 
 <p>
-  <strong>Descripcion portafolio:</strong>
+  <strong>Descripcion de la imagen:</strong>
   <%= @portafolio.descripcion_portafolio %>
 </p>
 
-<%= link_to 'Edit', edit_portafolio_path(@portafolio) %> |
-<%= link_to 'Back', portafolios_path %>
+<p>
+	<strong>Imagen:</strong><br>
+	<img src="<%= @portafolio.foto.url %>" width="250px;">
+</p>
+
+<%= link_to 'Editar', edit_portafolio_path(@portafolio), :class=>"btn btn-warning" %> 
+<%= link_to 'Atras', :back, :class=>"btn btn-success" %>
+</div>
+</div>

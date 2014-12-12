@@ -1,6 +1,12 @@
-<h1>Editing acontecimiento</h1>
+<div class="container" style="margin-top:60px;">
+<div class="jumbotron">
+<h1>Editar acontecimiento</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @acontecimiento %> |
-<%= link_to 'Back', acontecimientos_path %>
+<br>
+<br>
+<%= link_to 'Ver acontecimiento', @acontecimiento, :class=>"btn btn-success" %> 
+<%= link_to 'Volver a acontecimientos', acontecimientos_path, :class=>"btn btn-primary" %>
+</div>
+</div>

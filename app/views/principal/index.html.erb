@@ -177,10 +177,7 @@
 		<div class="row text-center">
 			<% @certificaciones.each do |certificacion| %>
 			<div class="col-md-4">
-				<span class="fa-stack fa-4x">
-					<i class="fa fa-circle fa-stack-2x text-primary"></i>
-					<i class="fa fa-book fa-stack-1x fa-inverse"></i>
-				</span>
+				<img src="<%= certificacion.foto.url %>" width="150px;">
 				<h4 class="service-heading">
 						<%= certificacion.titulo_certificacion %>
 				</h4>
