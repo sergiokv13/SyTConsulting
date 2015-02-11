@@ -21,6 +21,11 @@ body {
 overflow-x: hidden;
 font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.clear{
+	 	clear: both;
+	 	height: 0;
+	 	overflow: hidden;;
+	 }
 .text-muted {
 color: #777;
 }
@@ -42,7 +47,7 @@ a.active {
 outline: 0;
 }
 a {
-color: #fed136;
+color: red;
 }
 a:hover,
 a:focus,
@@ -171,7 +176,9 @@ background-color: #fff;
 	border-left: solid #6CB1FA;
 	border-right: solid #6CB1FA;
 }
-
+.navbar-default li:hover{
+	background-color: white;
+}
 
 
 .navbar-default .navbar-brand {
@@ -199,7 +206,7 @@ color: #A5A5A5;
 text-align: center;
 color: #fff;
 background-attachment: scroll;
-background-image: url(/assets/bg.jpg);
+background-image: url(/assets/bg2.jpg);
 background-position: center center;
 background-repeat: none;
 -webkit-background-size: cover;
@@ -210,6 +217,7 @@ background-size: cover;
 #header .intro-text {
 padding-top: 100px;
 padding-bottom: 50px;
+color: #6CB1FA;
 }
 #header .intro-text .intro-lead-in {
 margin-bottom: 25px;
@@ -247,6 +255,9 @@ section h2.section-heading {
 margin-top: 0;
 margin-bottom: 15px;
 font-size: 40px;
+}
+.ayuda{
+	visibility: hidden;
 }
 section h3.section-subheading {
 margin-bottom: 75px;
